@@ -1,0 +1,43 @@
+<openerp>
+<data>
+	<act_window id = "action_policias" name="Policias" res_model="comisaria.policias" view_mode="tree,form"/>
+	<menuitem name="Policias" id = "menu_policias"/>
+	<menuitem name="Policias" id="menu_policias_policias" parent="menu_policias" action="action_policias"/>
+	
+	<record model = "ir.ui.view" id="view_policias_form">
+		<field name="name">Policias</field>
+		<field name="model">comisaria.policias</field>
+		<field name="type">form</field>
+		<field name="arch" type="xml">
+			<form string="Policias">
+			<header></header>
+			<sheet>
+				<group name="group_top">
+					<group name="group_left">
+						<field name="placa"/>
+						<field name="nombre"/>
+						<field name="edad"/>
+						<field name="localidad"/>
+						<field name="patrulla"/>
+					</group>
+				</group>
+			</sheet>
+			</form>
+		</field>
+	</record>
+	<record model = "ir.ui.view" id="view_policias_tree">
+		<field name="name">Policias</field>
+		<field name="model">comisaria.policias</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree colours="grey:active==True">
+				<field name="placa"/>
+				<field name="nombre"/>
+				<field name="edad"/>
+				<field name="localidad"/>
+				<field name="patrulla"/>				
+			</tree>
+		</field>
+	</record>
+</data>
+</openerp>

@@ -1,0 +1,40 @@
+<openerp>
+<data>
+	<act_window id="action_patrullas" name="Patrullas" res_model="comisaria.patrullas" view_mode="tree,form"/>
+	<menuitem name="Patrullas" id ="menu_patrullas" parent="menu_policias" action="action_patrullas"/>
+	
+	<record model="ir.ui.view" id="view_patrullas_form">
+		<field name="name">Patrullas</field>
+		<field name="model">comisaria.patrullas</field>
+		<field name="type">form</field>
+		<field name="arch" type="xml">
+			<form string="Patrullas">
+				<header></header>
+				<sheet>
+					<group name="group_top">
+						<group name="group_left">
+						<field name="idpatrulla"/>
+						<field name="nombrepatrulla"/>
+						<field name="zonapatrulla"/>
+						<field name="policiasenpatrulla"/>
+						</group>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+	<record model="ir.ui.view" id="view_propietarios_tree">
+		<field name="name">Patrullas</field>
+		<field name="model">comisaria.patrullas</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree colours="grey:active==True">
+				<field name="idpatrulla"/>
+				<field name="nombrepatrulla"/>
+				<field name="zonapatrulla"/>
+				<field name="policiasenpatrulla"/>
+			</tree>
+		</field>
+	</record>
+</data>
+</openerp>
